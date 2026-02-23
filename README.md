@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Propsoch Landing Page Redesign
 
-## Getting Started
+## Overview
+This project is a redesigned and performance-optimized version of the Propsoch landing page, created as part of a frontend intern assignment.
 
-First, run the development server:
+The goal was to analyze the existing landing page, identify UX and performance issues, and build an improved version with better Lighthouse scores and cleaner UX.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Part 1: Lighthouse Analysis (Original Site)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Performance: ~54
+- Accessibility: ~71
+- Best Practices: ~92
+- SEO: ~100
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Key issues identified:
+- Heavy hero section with video and large assets
+- High JavaScript execution time
+- Cluttered layout on mobile
+- Accessibility issues (contrast, labels, heading order)
+- Over-complex navigation for a landing page
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Part 2: Improvements Made
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Redesigned the hero section with a clear value proposition
+- Removed heavy media to improve Core Web Vitals
+- Simplified page structure for better readability and mobile UX
+- Used semantic HTML and accessible color contrast
+- Optimized images using Next.js `next/image`
+- Added trust and benefit sections inspired by the original site
+- Implemented a minimal sticky header for brand visibility
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Final Lighthouse Scores (Redesigned Page)
 
-## Deploy on Vercel
+- Performance: 94
+- Accessibility: 95
+- Best Practices: 100
+- SEO: 100
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+---
+
+## Deployment
+The project is deployed using Vercel.
